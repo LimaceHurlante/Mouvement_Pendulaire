@@ -19,10 +19,10 @@ var queueLimite = 30;
 
 function setup() {
 
-   //can = createCanvas(400, 400);
+  //can = createCanvas(400, 400);
   //can.addClass('myClass');
   //can.parent(cc); 
-  
+
   //----------Sliders
   ccStart = createElement("center", " ");
   sli[0] = createSlider(0, 10, 0);
@@ -45,7 +45,7 @@ function setup() {
   //----------Queue
   can = createCanvas(600, 600);
   can.elt.style.position = "fixed";
-  can.style("position","0,0");
+  can.style("position", "0,0");
   noStroke();
   fill(80, 50, 255);
   sett = setInterval(creationAuto, 1000)
@@ -53,8 +53,8 @@ function setup() {
 
 
 function draw() {
-drawSliders(); 
- // drawQueue();
+  drawSliders();
+  // drawQueue();
 }
 //----------Sliders
 function lanceAnim() {
@@ -66,8 +66,9 @@ function lanceAnim() {
 
 
 }
-function drawSliders(){
-ang += sli[0].value() / 100;
+
+function drawSliders() {
+  ang += sli[0].value() / 100;
   psss += sli[1].value() / 100;
   for (var i = 2; i < sli.length; i++) {
     myAng = ang + map(i, 0, 9, 0, psss);
@@ -76,7 +77,7 @@ ang += sli[0].value() / 100;
 }
 
 //----------Queue
-function drawQueue(){
+function drawQueue() {
   background(190);
 
   for (var i = 0; i < ballon.length; i++) {
@@ -88,9 +89,11 @@ function drawQueue(){
   }
 
 }
+
 function creationAuto() {
   ballon.push(new Balle(-r / 2, random(5, height - 5)));
 }
+
 function mouseClicked() {
   ballon.push(new Balle(mouseX, mouseY));
 }
