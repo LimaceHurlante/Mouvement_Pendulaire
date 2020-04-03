@@ -1,4 +1,4 @@
-//----------Sliders
+//----------Sliders // Coucou Anaïs
 let sli = [];
 let can;
 let pv = [];
